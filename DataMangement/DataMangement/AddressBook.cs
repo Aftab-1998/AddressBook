@@ -14,6 +14,7 @@ namespace DataManagement
             foreach (var contact in addressList)
             {
                 Console.WriteLine(contact.FirstName + " " + contact.LastName);
+                Console.WriteLine("FirstName: " + contact.FirstName);
                 Console.WriteLine("Last Name: " + contact.LastName);
                 Console.WriteLine("City : " + contact.City);
                 Console.WriteLine("State : " + contact.State);
@@ -22,6 +23,9 @@ namespace DataManagement
                 Console.WriteLine("Email : " + contact.Email);
             }
         }
-      
+        public void AddContact(Contact contact) // This Method Will Add the Details of Customer
+        {
+            addressList.Add(contact);
+        }
     }
 }
