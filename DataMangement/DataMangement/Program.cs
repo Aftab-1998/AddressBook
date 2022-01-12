@@ -8,7 +8,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter your Choice Number to Execute the Address Program Press- 1-Contacts, 2-Add Contact, 3-Edit Contact");
+            Console.WriteLine("Enter your Choice Number to Execute the Address Program Press- 1-Contacts, 2-Add Contact, 3-Edit Contact, 4-Delete Contact");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -47,6 +47,13 @@ class program
                     ab.Display();
                     break;
                 case 4:
+                    Console.WriteLine("Enter the Contact Name to be Deleted: ");
+                    string user = Console.ReadLine();
+                    AddressBook abb = new AddressBook();
+                    abb.DeleteContact(user);
+                    abb.Display();
+                    break;
+                case 5:
                     flag = false;
                     break;
             }
