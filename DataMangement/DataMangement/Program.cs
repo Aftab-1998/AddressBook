@@ -8,7 +8,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter your Choice Number to Execute the Address Program Press- 1-Contacts, 2-Add Contact, 3-Edit Contact, 4-Delete Contact");
+            Console.WriteLine("Enter your Choice Number to Execute the Address Program Press- 1-Contacts, 2-Add Contact, 3-Edit Contact, 4-Delete Contact, 5-Add Multiple Contact");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -54,6 +54,21 @@ class program
                     abb.Display();
                     break;
                 case 5:
+                    Console.WriteLine("Enter the Contact Information to be Add in form of FirstName, LastName, Addr, City, State, Zip, Ph.No, Email.");
+                    Console.WriteLine("Enter the Contact to be Add: ");
+                    Contact con = new Contact();
+                    AddressBook abo = new AddressBook();
+                    abo.AddContact(con);
+                    con.FirstName = Console.ReadLine();
+                    con.LastName = Console.ReadLine();                   
+                    con.City = Console.ReadLine();
+                    con.State = Console.ReadLine();
+                    con.Zip = Console.ReadLine();
+                    con.PhoneNumber = Console.ReadLine();
+                    con.Email = Console.ReadLine();
+                    abo.Display();
+                    break;
+                case 6:
                     flag = false;
                     break;
             }
